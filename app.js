@@ -12,8 +12,17 @@ function submitHandler(){
     var ip = initialPrice.value;
     var qty = stocksQuantity.value;
     var curr = currentPrice.value;
+    if (ip && qty && curr ){
+        calculateProfitAndLoss (ip,qty,curr);
+       
+     
+    }
+    else{
+        outputBox.innerHTML="Please Enter All The Feild "
+        
 
-    calculateProfitAndLoss(ip,qty,curr);
+       
+    }
 
 
 }
